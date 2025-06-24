@@ -1,8 +1,3 @@
-Thank you for your clarification! To confirm: your project takes images (not only videos) as input for vehicle detection and classification.
-
-Here’s an improved README.md section reflecting this capability:
-
----
 
 # Urban Vision Hackathon
 
