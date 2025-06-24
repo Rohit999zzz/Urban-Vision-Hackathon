@@ -1,0 +1,30 @@
+# Ignore data and cache directories
+/data/
+*.cache
+*.pyc
+__pycache__/
+*.pkl
+*.pt
+*.log
+*.csv
+*.jpg
+*.png
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.zip
+*.tar
+*.tar.gz
+*.egg-info/
+slurm/
+
+# Ignore git and editor files
+.git/
+.gitignore
+*.swp
+*.swo
+.DS_Store
+.env
+venv/
+.envrc 
