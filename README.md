@@ -83,4 +83,3 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for more 
 
 ---
 
-Let me know if you need more customization or details about the command-line interface, model, or directory structure!
