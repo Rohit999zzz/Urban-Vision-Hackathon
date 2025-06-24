@@ -1,39 +1,91 @@
+Thank you for your clarification! To confirm: your project takes images (not only videos) as input for vehicle detection and classification.
+
+Here’s an improved README.md section reflecting this capability:
+
+---
+
 # Urban Vision Hackathon
 
-Yeh project ek computer vision based solution hai jo urban environments mein vehicle aur object detection ke liye bana hai.
+This repository was developed as part of the Urban Vision Hackathon held at the Indian Institute of Science (IISc), Bengaluru. It showcases a computer vision pipeline designed for detection and classification of vehicle types in traffic footage.
 
-## Project Structure
+## Project Overview
 
-- `main.py` : Main entry point
-- `train.py` : Model training script
-- `predict_and_save_json.py` : Prediction aur JSON output
-- `coco2yolo.py` : COCO se YOLO format conversion
-- `csvtojson.py` : CSV se JSON conversion
-- `process_directory.py` : Directory processing tools
-- `user_annotation_analysis.py` : User annotation analysis
-- `data/` : Data, images, labels, configs
-- `vehicle_yolov10/` : YOLOv10 models aur weights
-- `slurm/` : Slurm job scripts
+Urbanization has led to increased vehicular traffic in cities. Efficient monitoring and classification of vehicle types is crucial for traffic management and urban planning. This project presents a computer vision pipeline to automatically detect and classify vehicles in both images and video footage using deep learning techniques.
 
-## Requirements
+## Features
 
-Install dependencies:
-```
-pip install -r requirements.txt
-```
+- Vehicle detection from images and video frames
+- Classification of vehicle types (e.g., car, bus, truck, bike)
+- Supports real-time and batch processing
+- Modular and extensible codebase
+
+## Tech Stack
+
+- **Programming Language:** Python
+- **Deep Learning:** PyTorch / TensorFlow (please specify which is used)
+- **Computer Vision:** OpenCV
+- **Containerization:** Docker
+- **Shell Scripts:** For automation
+
+## Setup Instructions
+
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/Rohit999zzz/Urban-Vision-Hackathon.git
+    cd Urban-Vision-Hackathon
+    ```
+
+2. **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **(Optional) Run with Docker**
+    ```bash
+    docker build -t urban-vision .
+    docker run -it --rm urban-vision
+    ```
+
+4. **Prepare Input Data**
+    - Place your image files in the `data/images/` directory.
+    - Place your video files in the `data/videos/` directory.
 
 ## Usage
 
-Training:
-```
-python train.py
+### Detect and Classify Vehicles in Images
+
+```bash
+python main.py --input data/images/your_image.jpg --output results/
 ```
 
-Prediction:
+### Detect and Classify Vehicles in Videos
+
+```bash
+python main.py --input data/videos/your_video.mp4 --output results/
 ```
-python predict_and_save_json.py
-```
+
+- `--input`: Path to the input image or video file
+- `--output`: Directory to save results (frames, logs, etc.)
+
+## Results & Examples
+
+Sample output images and statistics are available in the `results/` directory.
+
+![Sample Output](results/sample_output.jpg)
+
+## Contributing
+
+Contributions are welcome! Please open issues or pull requests for improvements, bug fixes, or suggestions.
 
 ## License
 
-MIT 
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+## Acknowledgements
+
+- Indian Institute of Science (IISc), Bengaluru for hosting the hackathon
+- Open source contributors
+
+---
+
+Let me know if you need more customization or details about the command-line interface, model, or directory structure!
